@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ day }}'s Task</title>
+    <link rel="stylesheet" href="{% static 'tasks/style.css' %}">
+</head>
+<body>
+<div class="container">
+    <h1>{{ day }}'s Task</h1>
+    <p><strong>{{ task }}</strong></p>
+    <a href="{% url 'index' %}">← Back to all days</a>
+</div>
+</body>
+</html>

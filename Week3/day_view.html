@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tasks for {{ day }}</title>
+</head>
+<body>
+    <h1>{{ day }}</h1>
+    
+    {% if tasks %}
+        <ul>
+            {% for task in tasks %}
+                <li><strong>{{ task.title }}</strong>: {{ task.description }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No tasks available for {{ day }}.</p>
+    {% endif %}
+
+    <a href="{% url 'index' %}">⬅ Back to Week View</a>
+</body>
+</html>
